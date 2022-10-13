@@ -1,0 +1,201 @@
+
+
+.pad{
+    position: relative;
+    left: 1020px;
+}
+
+.pad2{
+    position: relative;
+    left: 1040px;
+}
+
+.color_div{
+    background-color: white;
+    border-radius: 10px ;
+    box-shadow: 0px 0px 80px 2px rgb(231, 231, 231);
+}
+
+.div_color{
+    background-color: black;
+    color: white;
+    position: relative;
+    top: 4px;
+    right: 157px;
+    border-radius: 10px 0px 0px 10px ;
+}
+
+
+.pos{
+    position: relative;
+    bottom: 250px;
+}
+
+.position_login{
+    position: relative;
+    right: 160px;
+    color: rgb(0, 0, 0);
+}
+
+.ulabel{
+    position: relative;
+    bottom: 360px;
+    left: 650px;
+}
+
+.uinput{
+    position: relative;
+    bottom: 325px;
+    left: 574px;
+    border-radius: 7px;
+    border-width: 1px;
+}
+
+.plabel{
+    position: relative;
+    bottom: 260px;
+    left: 220px;
+}
+
+.pinput{
+    position: relative;
+    bottom: 225px;
+    left: 150px;
+    border-radius: 7px;
+    border-width: 1px;
+}
+
+.but{
+    position: relative;
+    bottom: 160px;
+    right: 60px;
+    border: none;
+    border-radius: 7px;
+    background-color: black;
+}
+
+
+.home{
+    position: absolute;
+    top: 100px;
+}
+
+.himg{
+    position: absolute;
+    left: 770px;
+    bottom: 300px;
+}
+
+.imgcorner{
+    border-radius: 5px;
+    box-shadow: 0px 0px 80px 2px rgb(231, 231, 231);
+}
+
+.hometext1{
+    position: absolute;
+    left: 970px;
+    top: 380px;
+}
+.hometext2{
+    position: absolute;
+    left: 970px;
+    top: 505px;
+}
+
+.button_color{
+    color: white;
+    background-color: black;
+    border: none;
+    position: relative;
+    left: 260px;
+}
+
+.container_css{
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgb(241, 241, 241);
+}
+
+.button_color:hover{
+    box-shadow: 0px 0px 10px 0px rgb(119, 116, 116);
+}
+
+.fname{
+    position: relative;
+    left: 20px;
+}
+
+.lname{
+    position: absolute;
+    left: 695px;
+    bottom: 510px;
+}
+.uname{
+    position: relative;
+    left: 20px;
+}
+
+.mobile{
+    position: absolute;
+    left: 695px;
+    bottom: 423px;
+}
+
+.add{
+    position: relative;
+    left: 20px;
+}
+
+.group{
+    position: relative;
+    left: 20px;
+}
+
+.one{
+    position: relative;
+    left: 20px;
+}
+
+.two{
+    position: absolute;
+    left: 100px;
+    bottom: 24px;
+}
+
+.three{
+    position: relative;
+    left: 195px;
+    bottom: 48px;
+}
+
+.email{
+    position: relative;
+    left: 20px;
+}
+
+.im{
+    position: absolute;
+    left: 695px;
+    bottom: 242px;
+}
+
+.pass{
+    position: relative;
+    left: 20px;
+}
+
+.cpass{
+    position: relative;
+    left: 20px;
+}
+
+
+
+.msg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+

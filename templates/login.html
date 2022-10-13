@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> 
+{% endblock %}
+
+
+{% block content %}
+      <form method="post" action="{% url 'user_login' %}">
+        {% csrf_token %}
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container-fluid color_div" style="width: 800px;">
+            <div class="row">
+                <div class="col">
+                    <div class="container-fluid div_color" style="width: 300px;">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <h1 class="pos">Welcome</h1>
+                        <h4 class="pos">to Swiss University</h4>
+                        <h6 class="pos">Where we meet limits of excellence</h6>
+                    </div>
+                </div>
+                <div class="position_login">
+                    <br>
+                    <h2>Login to use</h2>
+                </div>
+            </div>
+        </div>
+
+        <label class="ulabel" style="color: rgb(0, 0, 0);">Username</label>
+        <input class="uinput" style="width: 350px; height: 40px" type="text" name="uname">
+        <label class="plabel" style="color: rgb(0, 0, 0);">Password</label>
+        <input class="pinput" style="width: 350px; height: 40px" type="text" name="pass">
+        <button class="but pt-1" style="color: white;" type="submit"><h6>Login</h6></button>
+      </form>      
+      
+{% endblock %}

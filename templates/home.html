@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> 
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid home">
+        <img src="{% static 'image/pic2.png' %}" class="imgcorner" width="70%">
+        <div class="himg">
+            <h1 style="font-family: Lowvetica;font-size: 80px;"><span style="color: white;">Why</span> Swiss University</h1>
+        </div>
+    </div>
+    <div class="hometext1">
+        From our world-recognised universities to our <br> innovative teaching approach and 
+        the leading <br> minds who deliver it, we have what you need <br> to reach your potential.
+    </div>
+    <div class="hometext2">
+        The Swiss University has been the preferred choice <br> for some of the most important minds in history. <br> 
+        One in four world leaders has studied here, so if <br> you are dreaming of achieving big things, 
+        you can <br> be sure you are in the right place.
+    </div>
+    
+
+{% endblock %}

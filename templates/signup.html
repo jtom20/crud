@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> 
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% for msg in messages %}
+    <div class="alert alert-danger mt-5 alert-dismissible fade show msg" style="width: 100%;">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        {{ msg }}
+    </div>
+    {% endfor %}
+</div>     
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<form method="post" action="{% url 'user_create' %}">
+    {% csrf_token %}
+    <div class="container container_css" style="width: 650px;">
+        <br>
+        <div class="form-group fname">
+            <label><b>First Name</b></label>
+            <input type="text" class="form-control" style="width: 270px;" name="fname" required>
+        </div>
+        <div class="form-group lname">
+            <label><b>Last Name</b></label>
+            <input type="text" class="form-control" style="width: 270px;" name="lname" required>
+        </div>
+        <div class="form-group uname">
+            <label><b>UserName</b></label>
+            <input type="text" class="form-control" style="width: 270px;" name="uname" required>
+        </div>
+        <div class="form-group mobile">
+            <label><b>Mobile</b></label>
+            <input type="number" class="form-control" style="width: 270px;" name="mobile" required>
+        </div>
+        <div class="form-group add">
+            <label><b>Address</b></label>
+            <input type="text" class="form-control" style="width: 580px;" name="address" required>
+        </div>
+        <div class="group">
+            <label><b>Gender</b></label>
+        </div>
+        <div class="form-check one">
+            <input class="form-check-input" type="radio" name="gender" value="Male" required>
+            <label class="form-check-label">Male</label>
+        </div>
+        <div class="form-check two">
+            <input class="form-check-input" type="radio" name="gender" value="Female" required>
+            <label class="form-check-label">Female</label>
+        </div>
+        <div class="form-check three" >
+            <input class="form-check-input" type="radio" name="gender" value="Other" required>
+            <label class="form-check-label">Other</label>
+        </div>
+        <div class="form-group im">
+            <label><b>Profile Image</b></label>
+            <input type="file" class="form-control" style="width: 270px; height:44px" name="img ">
+        </div>
+        <div class="form-group email">
+            <label><b>Email</b></label>
+            <input type="text" class="form-control" style="width: 580px;" name="email" required>
+        </div>
+        
+        <div class="form-group pass">
+            <label><b>Password</b></label>
+            <input type="text" class="form-control" style="width: 580px;" name="pass" required>
+        </div>
+        <div class="form-group cpass">
+            <label><b>Confirm Password</b></label>
+            <input type="text" class="form-control" style="width: 580px;" name="cpass" required>
+        </div>
+        <button type="submit" class="button_color py-1 px-3" data-toggle="modal" data-target="#exampleModal" style="border-radius: 10px;">Submit</button>
+        <br>
+        <br>
+    </div>
+    
+</form>
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+<br>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'admin.html'%}
+
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin_style.css' %}">
+
+{% block admin %}
+
+    <div class="home_content">
+        <div class="text">ADD COURSES</div>
+    </div>
+
+    <div class="table_content">
+        <div class="card border-0" style="width: 500px;">
+            <table class="table table-stripped content-table">
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>CourseName</th>
+                    <th>Duration</th>
+                    <th>Fee</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for cor in course %}
+                  <tr>
+                    <td>{{cor.id}}</td>
+                    <td>{{cor.course_name}}</td>
+                    <td>{{cor.duration}}</td>
+                    <td>{{cor.fee}}</td>
+                  </tr>
+                    {% endfor %}
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+    <div class="entercourse">
+        <form method="post" action="{% url 'add_course' %}">
+            <div class="card border-0" style="width: 500px;">
+                {% csrf_token %}
+                <br>
+                <label class="marg"><b>Course Name</b></label>
+                <input class="admin_pos1 marg" style="width: 320px;" type="text" name="course" required>
+                <br>
+                <label class="marg"><b>Course Duration</b></label>
+                <input class="admin_pos2 marg" style="width: 320px;" type="number" name="cdue" required>
+                <br>
+                <label class="marg"><b>Course Fee</b></label>
+                <input class="admin_pos3 marg" style="width: 320px;" type="number" name="cfee" required>
+                <br>
+                <button class="col py-1" type="submit"><b>ADD</b></button>
+            </div>
+        </form>
+        
+
+    </div>
+    
+
+{% endblock %}
+

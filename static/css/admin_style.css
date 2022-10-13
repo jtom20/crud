@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" A sans-serif;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background-color: rgb(13, 29, 29);
+    padding : 6px 14px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active{
+    width: 240px;
+}
+
+.sidebar .logo_content .logo{
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .logo_content .logo{
+    opacity: 1;
+    pointer-events: none;
+}
+
+.logo_content .logo i{
+    font-size: 40px;
+    margin-right: 7px;
+}
+
+.logo_content .logo .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.sidebar #btn{
+    position: absolute;
+    color: #fff;
+    left: 55%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.sidebar #btn:hover{
+    color: #11101d;
+    background-color: #fff;
+}
+
+
+.sidebar.active #btn{
+    left: 90%;
+    width: 40px;
+}
+
+.sidebar ul{
+    margin-top: 20px;
+}
+
+.sidebar ul li{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+}
+
+
+
+.sidebar ul li .bx-search{
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    font-size: 22px;
+}
+
+.sidebar ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+.sidebar ul li a:hover{
+    color: #11101d;
+    background-color: #fff;
+}
+
+
+.sidebar ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+ 
+.sidebar .links_name{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.sidebar.active .links_name{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.sidebar .profile_content{
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar .profile_content .profile{
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background-color: rgb(0, 58, 58) ;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .profile_content .profile{
+    background: none;
+}
+
+.profile_content .profile .profile_details{
+    display: flex;
+    align-items: center; 
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}  
+
+.sidebar.active .profile .profile_details{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.profile .profile_details img{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.profile .profile_details .name_job{
+    margin-left: 10px;
+}
+
+.profile .profile_details .name{
+    font-size: 18px;
+    font-weight: 400;
+}
+.profile .profile_details .job{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.profile #more{
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .profile #more{
+    left: 88%;
+}
+
+.sidebar.active .profile #more{
+    background-color: #1d1b31;
+}
+
+.home_content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 180px);
+    left: 120px;
+    bottom: -65px;
+    transition: all 0.4s ease;
+}
+
+.home_content .text{
+    font-size: 25px;
+    font-weight: 500;
+    color: #1d1b31;
+    margin: 12px;
+    white-space: nowrap;
+}
+
+.sidebar.active .home_content{
+    width: calc(100% - 240px);
+    left: 240px;
+}
+ 
+.profile{
+    position: absolute;
+    left: 120px;
+    bottom: 250px;
+    margin: 12px;
+    transition: all 0.5s ease;
+    
+
+}
+.sidebar.active .profile{
+    left: 240px;
+}
+
+.ca{
+    background-color: #11101d;
+    object-fit: fill;
+    box-shadow: 0px 0px 20px 0px rgb(241, 241, 241);
+    border-radius: 50%;
+    margin: 15px;
+}
+.card{
+    box-shadow: 0px 0px 20px 0px rgb(241, 241, 241);
+}
+
+.pos{
+    position: absolute;
+    left: 70px;
+    top: 250px;
+    margin: 15px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .pos{
+    left: 200px;
+}
+
+.details{
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .details{
+    left: 480px;
+} 
+
+
+.table_content{
+    position: absolute;
+    left: 120px;
+    bottom: 490px;
+    margin: 12px;
+    transition: all 0.5s ease;
+
+}
+
+.sidebar.active .table_content{
+    left: 240px;
+}
+
+.entercourse{
+    position: absolute;
+    left: 720px;
+    bottom: 220px;
+    margin: 12px;
+    transition: all 0.5s ease; 
+}
+
+.sidebar.active .entercourse{
+    left: 800px;
+}
+
+.admin_pos1{
+    position: absolute;
+    left: 130px;
+    top: 25px;
+    border: none;
+    box-shadow: 0px 0px 10px 2px rgb(241, 241, 241);
+    border-radius: 5px;
+}
+.admin_pos2{
+    position: absolute;
+    left: 130px;
+    top: 110px;
+    border: none;
+    box-shadow: 0px 0px 10px 2px rgb(241, 241, 241);
+    border-radius: 5px;
+}
+.admin_pos3{
+    position: absolute;
+    left: 130px;
+    top: 195px;
+    border: none;
+    box-shadow: 0px 0px 10px 2px rgb(241, 241, 241);
+    border-radius: 5px;
+}
+.marg{
+    margin: 20px;
+}
+.col{
+    background-color: rgb(0, 58, 58);
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+
+}
+
+.buttt{
+    position: absolute;
+    left: 1110px;
+    bottom: 575px;
+    margin: 12px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: rgb(0, 58, 58);
+    font-weight: bold;
+    transition: all 0.4s ease;
+
+}
+
+.buttt:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(226, 226, 226);
+    
+}
+
+.sidebar.active .buttt{
+    left: 1230px;
+}
+
+.studentdetails{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 180px);
+    left: 120px;
+    top: 100px;
+    margin: 12px;
+    transition: all 0.4s ease;
+}
+
+
+
+
+
+
+/* CSS for add courses */
+.content-table {
+    position: absolute;
+    bottom: 0px;
+    top: -70px;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: rgb(0, 58, 58) ;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid rgb(0, 58, 58) ;
+}
+
+

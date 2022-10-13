@@ -1,0 +1,31 @@
+{% extends 'admin.html' %}
+
+
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin_style.css' %}"> 
+
+
+{% block admin %}
+
+    <div class="home_content">
+        <div class="text">Welcome Admin</div>
+    </div>
+
+      <div class="profile">
+        <div class="card border-0" style="width: 500px;">
+                <img style="width: 200px" class="ca" src="{% static 'image/default.png' %}" alt="">
+                <div class="pos"><b>{{user}}</b></div>
+                <br>
+                <br>
+                <br>
+          </div>
+      </div>
+
+      <div class="details">
+        <label class="name"><b>{{user.email}}</b></label>
+        <div>Admin has the power to moniter the entire e-platforms functions.</div>
+      </div>
+
+
+
+{% endblock %}

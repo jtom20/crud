@@ -1,0 +1,44 @@
+{% extends 'admin.html'%}
+
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin_style.css' %}">
+
+{% block admin %}
+
+<div class="home_content">
+    <div class="text">STUDENT TABLE</div>
+</div>
+
+<div class="table_content">
+    <div class="card border-0" style="width: 1100px;">
+        <table class="table table-stripped content-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Address</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Joining Date</th>
+
+              </tr>
+            </thead>
+            <!-- <tbody>
+                {% for cor in course %}
+              <tr>
+                <td>{{cor.id}}</td>
+                <td>{{cor.course_name}}</td>
+                <td>{{cor.duration}}</td>
+                <td>{{cor.fee}}</td>
+              </tr>
+                {% endfor %}
+            </tbody> -->
+          </table>
+    </div>
+</div>
+<a href="{% url 'addstudent_fun' %}"><input class="buttt py-1 px-2" type="button" value="Add Student"></a>
+
+
+{% endblock %}
